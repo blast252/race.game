@@ -16,7 +16,7 @@ const startClickHandler = () => {
     const selecctValue = comboDOM.value;
 
     if (selecctValue === "") {
-        return alert("공을 선택해주세요.");
+        return alert("동물을 선택해주세요.");
     }
 
     let fuckSet = setInterval(() => {
