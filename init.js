@@ -138,6 +138,8 @@ const reset__click = () => {
     ball2DOM.style.marginLeft = "";
     ball3DOM.style.marginLeft = "";
     ball4DOM.style.marginLeft = "";
+    result__js.textContent = "";
+    win__confirm__js.textContent = "";
 };
 
 
