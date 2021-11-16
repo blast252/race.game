@@ -2,12 +2,17 @@
 
 .rail {
   width: 100%;
-  height: 480px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .rail .rail__road {
   width: 100%;
   height: calc(100% / 4);
+  background-color: rgb(230, 248, 255);
   border-bottom: 1px solid #999;
 
   display: flex;
@@ -17,39 +22,40 @@
 }
 
 .rail .rail__road:nth-child(2n) {
-  background-color: #eee;
+  background-color: rgb(225, 245, 225);
 }
 
 .rail__road__ball1,
 .rail__road__ball2,
 .rail__road__ball3,
 .rail__road__ball4 {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  color: #eee;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 80px;
 }
-
 .rail__road__ball1 {
-  background-color: aqua;
+  color: crimson;
 }
 .rail__road__ball2 {
-  background-color: blueviolet;
+  color: rgb(83, 68, 71);
 }
 .rail__road__ball3 {
-  background-color: skyblue;
+  color: rgb(17, 67, 97);
 }
 .rail__road__ball4 {
-  background-color: brown;
+  color: rgb(193, 153, 101);
 }
 
 .status {
   width: 100%;
-  margin: 20px 0px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .status .status__btn,
@@ -58,9 +64,49 @@
   height: 25px;
   border: 1px solid #999;
   border-radius: 10px;
-  color: #222;
+  background-color: rgb(51, 47, 41);
+  color: rgb(252, 249, 249);
+  margin-bottom: 10px;
 }
 
 .status .status__combo {
   outline: none;
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#result-js {
+  margin-bottom: 10px;
+  color: rgb(83, 82, 82);
+  font-size: 20px;
+}
+
+#win-confirm-js {
+  color: palevioletred;
+  font-size: 35px;
+}
+
+@keyframes rotato-win {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.3);
+    color: crimson;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+#win-confirm-js {
+  will-change: transform;
+  animation: rotato-win 10s ease-in-out infinite;
 }

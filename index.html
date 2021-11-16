@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aniaml || Race</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <section class="rail">
         <div class="rail__road">
-            <article class="rail__road__ball1" id="ball1">1</article>
+            <article class="rail__road__ball1" id="ball1"><i class="fas fa-dragon fa-4x"></i></article>
         </div>
         <div class="rail__road">
-            <article class="rail__road__ball2" id="ball2">2</article>
+            <article class="rail__road__ball2" id="ball2"><i class="fas fa-hippo fa-4x"></i></article>
         </div>
         <div class="rail__road">
-            <article class="rail__road__ball3" id="ball3">3</article>
+            <article class="rail__road__ball3" id="ball3"><i class="fas fa-dove fa-5x"></i></article>
         </div>
         <div class="rail__road">
-            <article class="rail__road__ball4" id="ball4">4</article>
+            <article class="rail__road__ball4" id="ball4"><i class="fas fa-dog fa-5x"></i></article>
         </div>
     </section>
     <section class="status">
         <select id="combo" class="status__combo">
             <option value="">--선택--</option>
-            <option value="1">1번</option>
-            <option value="2">2번</option>
-            <option value="3">3번</option>
-            <option value="4">4번</option>
+            <option value="1">드래곤</option>
+            <option value="2">하마</option>
+            <option value="3">비둘기</option>
+            <option value="4">강아지</option>
         </select>
 
-        <button class="status__btn" onclick="javascript:startClickHandler()">GAME START</button>
+        <button class="status__btn" onclick="javascript:startClickHandler()">RACE START</button>
+        <button class="status__btn reset__btn" onclick="javascript:reset__click()">RESET</button>
     </section>
-    <section class="result"></section>
+    <section class="result" id="result-js"></section>
+    <section class="result" id="win-confirm-js"></section>
 </body>
+<script src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+    ></script>
 <script src="./init.js"></script>
 </html>
